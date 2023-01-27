@@ -3,12 +3,11 @@
 </p>
 
 <ng-select [items]="accounts"
-           bindLabel="name"
-           bindValue="name"
-           groupBy="country"
+           bindLabel="viewName"
+           groupBy="viewGroup"
            [(ngModel)]="selectedAccount">
-    <ng-template ng-optgroup-tmp let-item="item">
-        {{item.country || 'Unnamed group'}}
+    <ng-template ng-option-tmp let-item="item">
+        {{item.viewName}}
     </ng-template>
 </ng-select>
 
